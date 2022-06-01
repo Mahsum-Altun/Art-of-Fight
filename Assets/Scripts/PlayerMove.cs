@@ -12,10 +12,14 @@ public class PlayerMove : MonoBehaviour
    public float XValue;
    private CharacterController m_char;
    private Animator m_Animator;
-   public float FwdSpeed;
+   public Animator scoreAnimator;
+   public static float FwdSpeed = 0;
    private float x;
    private float y;
    public float SpeedDodge;
+   public GameManager gameManager;
+   
+   
 
    void Start()
    {
@@ -26,13 +30,13 @@ public class PlayerMove : MonoBehaviour
 
    void Update()
    {
-      SwipeLeft = Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow);
-      SwipeRight = Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow);
-      if(SwipeLeft)
-      {
+       SwipeLeft = MobileInput.Instance.SwipeLeft;
+       SwipeRight = MobileInput.Instance.SwipeRight;
+        if(SwipeLeft)
+        {
           if(m_Side == SIDE.Mid)
           {
-              NewXPos = -XValue;
+              NewXPos = -XValue;  
               m_Side = SIDE.Left;
           }
           else if(m_Side == SIDE.Right)
@@ -40,9 +44,10 @@ public class PlayerMove : MonoBehaviour
               NewXPos = 0;
               m_Side = SIDE.Mid;
           }
-      }
-      else if(SwipeRight)
-      {
+        }
+
+        if(SwipeRight)
+        {
           if(m_Side == SIDE.Mid)
           {
               NewXPos = XValue;
@@ -53,11 +58,26 @@ public class PlayerMove : MonoBehaviour
               NewXPos = 0;
               m_Side = SIDE.Mid;
           }
-      }
-      //m_char.Move((NewXPos - transform.position.x) * Vector3.right);
-      Vector3 moveVector = new Vector3(x - transform.position.x, y * Time.deltaTime, FwdSpeed * Time.deltaTime);
+        }
+        Vector3 moveVector = new Vector3(x - transform.position.x, y * Time.deltaTime, FwdSpeed * Time.deltaTime);
         x = Mathf.Lerp(x, NewXPos, Time.deltaTime * SpeedDodge);
         m_char.Move(moveVector);
+        m_char.Move(Physics.gravity * Time.deltaTime);
+
+        if (GameManager.scoreValue == 200)
+        {
+          FwdSpeed = 15;
+        }
+          if (GameManager.scoreValue == 500)
+          {
+            FwdSpeed = 20;
+          }
+          if (GameManager.scoreValue == 3000)
+          {
+            FwdSpeed = 30;
+          }
+
+
    }
 
    public void Anim1()
@@ -72,6 +92,22 @@ public class PlayerMove : MonoBehaviour
    {
        m_Animator.Play("Fireball");
    }
+
+    private void OnTriggerEnter(Collider other) 
+   {
+       if (other.gameObject.tag == "Window")
+       {
+         GameManager.scoreValue += 10;
+         scoreAnimator.Play("Score Animation");
+       }
+       if (other.gameObject.tag == "Wall")
+       {
+          FindObjectOfType<GameManager>().EndGame(); 
+          Debug.Log("game over");
+       }
+        
+   }
+   
 
 
 }

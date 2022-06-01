@@ -1,28 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimTrigger : MonoBehaviour
 {
-   public Animator PlayerAnimControl;
+   private Animator PlayerAnimControl;
+
+   private void Start() 
+   {
+      PlayerAnimControl = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();    
+   }
 
    private void OnTriggerEnter(Collider other)
    {
        if(this.PlayerAnimControl.GetCurrentAnimatorStateInfo(0).IsTag("1"))
        {
-          Debug.Log("animasyon 1 geçti");
+           //Animation passes
        }
        else if(this.PlayerAnimControl.GetCurrentAnimatorStateInfo(0).IsTag("2"))
        {
-           Debug.Log("GG anmim 2");
+           FindObjectOfType<GameManager>().EndGame();
        }
        else if(this.PlayerAnimControl.GetCurrentAnimatorStateInfo(0).IsTag("3"))
        {
-           Debug.Log("GG anmim 3");
+           FindObjectOfType<GameManager>().EndGame();
        }
        else if(this.PlayerAnimControl.GetCurrentAnimatorStateInfo(0).IsTag("4"))
        {
-           Debug.Log("GG");
+           FindObjectOfType<GameManager>().EndGame();
        }
    }
 }

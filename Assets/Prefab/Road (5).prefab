@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 542813355816213251}
   - component: {fileID: 542813355816213252}
   - component: {fileID: 542813355816213253}
-  - component: {fileID: 8021628532907226528}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Wall
@@ -98,18 +97,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8021628532907226528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 542813355816213255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff3088baf3e62954cbf4ca8b2b329f7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &542813356601742023
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +109,6 @@ GameObject:
   - component: {fileID: 542813356601742019}
   - component: {fileID: 542813356601742020}
   - component: {fileID: 542813356601742021}
-  - component: {fileID: 6148902797999044414}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Wall
@@ -208,18 +194,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6148902797999044414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 542813356601742023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff3088baf3e62954cbf4ca8b2b329f7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &542813356755644072
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +206,6 @@ GameObject:
   - component: {fileID: 542813356755644068}
   - component: {fileID: 542813356755644069}
   - component: {fileID: 542813356755644070}
-  - component: {fileID: 5783615132512518368}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Wall
@@ -318,18 +291,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5783615132512518368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 542813356755644072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff3088baf3e62954cbf4ca8b2b329f7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &542813356784167157
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +523,6 @@ GameObject:
   - component: {fileID: 542813356993555443}
   - component: {fileID: 542813356993555444}
   - component: {fileID: 542813356993555445}
-  - component: {fileID: 5724587793276339659}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Wall
@@ -648,18 +608,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5724587793276339659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 542813356993555447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff3088baf3e62954cbf4ca8b2b329f7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &542813357001429735
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,7 +836,6 @@ GameObject:
   - component: {fileID: 542813357632597428}
   - component: {fileID: 542813357632597429}
   - component: {fileID: 542813357632597430}
-  - component: {fileID: 4787320909276772696}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Wall
@@ -974,18 +921,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4787320909276772696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 542813357632597432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff3088baf3e62954cbf4ca8b2b329f7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &542813356852663341
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -103,7 +103,6 @@ public class PlayerMove : MonoBehaviour
        if (other.gameObject.tag == "Wall")
        {
           FindObjectOfType<GameManager>().EndGame(); 
-          Debug.Log("game over");
        }
         
    }

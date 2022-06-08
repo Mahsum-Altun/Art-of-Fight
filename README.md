@@ -2,7 +2,7 @@
 
 A game where the roads you can pass through the windows with different animations are always random.
 
-Google play store link: Will update when review is finished
+Google play store link: https://play.google.com/store/apps/details?id=com.LightningDev.ArtofFight
 
 In-game screenshots
 

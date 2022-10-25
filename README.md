@@ -4,6 +4,8 @@ A game where the roads you can pass through the windows with different animation
 
 Google play store link: https://play.google.com/store/apps/details?id=com.LightningDev.ArtofFight
 
+Gameplay Video: https://www.youtube.com/watch?v=W0u_75NHHhA
+
 In-game screenshots
 
 ![GameImage2](https://user-images.githubusercontent.com/86557293/171969163-a3f8482d-b838-46f2-8d40-adf562943fa8.png)
